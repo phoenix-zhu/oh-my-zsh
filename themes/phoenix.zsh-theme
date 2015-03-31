@@ -76,7 +76,7 @@ prompt_git() {
           dirty=$(parse_git_dirty)
               ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git show-ref --head -s --abbrev |head -n1 2> /dev/null)"
               if [[ -n $dirty ]]; then
-                prompt_segment red black
+                prompt_segment magenta black
               else
                 prompt_segment white black
                     fi
@@ -159,7 +159,7 @@ prompt_virtualenv() {
 prompt_status() {
     local symbols
         symbols=()
-        [[ $RETVAL -ne 0 ]] && echo -n "%{%F{red}%}✘ $RETVAL"
+        [[ $RETVAL -ne 0 ]] && echo -n "%{%F{red}%}✘ $RETVAL "
         [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="⚙"
         symbols+="%D{%H:%M:%S}"
         prompt_segment cyan black "$symbols"
