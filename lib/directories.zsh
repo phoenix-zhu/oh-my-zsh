@@ -3,12 +3,12 @@ setopt auto_pushd
 setopt pushd_ignore_dups
 setopt pushdminus
 
-alias -g ...='../..'
-alias -g ....='../../..'
-alias -g .....='../../../..'
-alias -g ......='../../../../..'
+alias -g cd2='../..'
+alias -g cd3='../../..'
+alias -g cd4='../../../..'
+alias -g cd5='../../../../..'
 
-alias -- -='cd -'
+#alias -- -='cd -'
 alias 1='cd -'
 alias 2='cd -2'
 alias 3='cd -3'
@@ -19,16 +19,16 @@ alias 7='cd -7'
 alias 8='cd -8'
 alias 9='cd -9'
 
-alias md='mkdir -p'
-alias rd=rmdir
+#alias md='mkdir -p'
+#alias rd=rmdir
 alias d='dirs -v | head -10'
 
 # List directory contents
-alias lsa='ls -lah'
+#alias lsa='ls -lah'
 alias l='ls -lah'
 alias ll='ls -lh'
-alias la='ls -lAh'
+#alias la='ls -lAh'
 
 # Push and pop directories on directory stack
-alias pu='pushd'
-alias po='popd'
+#alias pu='pushd'
+#alias po='popd'
