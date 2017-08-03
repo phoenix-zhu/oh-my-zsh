@@ -160,9 +160,9 @@ prompt_status() {
     local symbols
         symbols=()
         [[ $RETVAL -ne 0 ]] && echo -n "%{%F{red}%}✘ $RETVAL "
-        [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="⚙"
-        symbols+="%D{%H:%M:%S}"
-        prompt_segment cyan black "$symbols"
+        [[ $(jobs -l | wc -l) -gt 0 ]] && (symbols+="⚙"; prompt_segment cyan black "$symbols")
+        #symbols+="%D{%H:%M:%S}"
+        #prompt_segment cyan black "$symbols"
 # prompt_segment_code 000 007 "%D{%H:%M:%S}"
 #echo -n "$BG[007]%F{000}%D{%H:%M:%S} $BG[002]%F{007}$SEGMENT_SEPARATOR"
 }
