@@ -42,10 +42,10 @@ alias g='git'
 
 alias ga='git add'
 alias gaa='git add --all'
-alias gapa='git add --patch'
-alias gau='git add --update'
+#alias gapa='git add --patch'
+#alias gau='git add --update'
 
-alias gb='git branch'
+#alias gb='git branch'
 #alias gba='git branch -a'
 #alias gbd='git branch -d'
 #alias gbda='git branch --no-color --merged | command grep -vE "^(\*|\s*(master|develop|dev)\s*$)" | command xargs -n 1 git branch -d'
@@ -59,7 +59,8 @@ alias gb='git branch'
 #alias gbss='git bisect start'
 
 #alias gc='git commit -v'
-alias gc!='git commit -v --amend'
+alias gc!='git commit --no-edit --amend'
+alias gce!='git commit -v --amend'
 #alias gcn!='git commit -v --no-edit --amend'
 #alias gca='git commit -v -a'
 #alias gca!='git commit -v -a --amend'
@@ -70,15 +71,15 @@ alias gcam='git commit -a -m'
 alias gcb='git checkout -b'
 alias gcf='git config --list'
 alias gcl='git clone --recursive'
-alias gclean='git clean -fd'
+#alias gclean='git clean -fd'
 #alias gpristine='git reset --hard && git clean -dfx'
 alias gcm='git checkout master'
 #alias gcd='git checkout develop'
-alias gcmsg='git commit -m'
+#alias gcmsg='git commit -m'
 alias gco='git checkout'
 #alias gcount='git shortlog -sn'
 #compdef _git gcount
-alias gcp='git cherry-pick'
+#alias gcp='git cherry-pick'
 #alias gcpa='git cherry-pick --abort'
 #alias gcpc='git cherry-pick --continue'
 #alias gcs='git commit -S'
@@ -91,9 +92,9 @@ alias gd='git diff'
 
 #compdef _git gdv=git-diff
 
-alias gf='git fetch'
+#alias gf='git fetch'
 #alias gfa='git fetch --all --prune'
-alias gfo='git fetch origin'
+#alias gfo='git fetch origin'
 
 #function gfg() { git ls-files | grep $@ }
 #compdef _grep gfg
@@ -145,13 +146,13 @@ alias gfo='git fetch origin'
 #alias ggpur='ggu'
 #compdef _git ggpur=git-checkout
 
-alias ggpull='git pull origin $(git_current_branch)'
-compdef _git ggpull=git-checkout
+#alias ggpull='git pull origin $(git_current_branch)'
+#compdef _git ggpull=git-checkout
 
-alias ggpush='git push origin $(git_current_branch)'
-compdef _git ggpush=git-checkout
+#alias ggpush='git push origin $(git_current_branch)'
+#compdef _git ggpush=git-checkout
 
-alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
+#alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
 alias gpsup='git push --set-upstream origin $(git_current_branch)'
 
 #alias ghh='git help'
@@ -187,31 +188,31 @@ alias glog='git log --oneline --decorate --graph'
 #alias gmum='git merge upstream/master'
 
 alias gp='git push'
-alias gpd='git push --dry-run'
+#alias gpd='git push --dry-run'
 #alias gpoat='git push origin --all && git push origin --tags'
 #compdef _git gpoat=git-push
 #alias gpu='git push upstream'
 #alias gpv='git push -v'
 
-alias gr='git remote'
-alias gra='git remote add'
-alias grb='git rebase'
+#alias gr='git remote'
+#alias gra='git remote add'
+#alias grb='git rebase'
 #alias grba='git rebase --abort'
 #alias grbc='git rebase --continue'
-alias grbi='git rebase -i'
+#alias grbi='git rebase -i'
 #alias grbm='git rebase master'
 #alias grbs='git rebase --skip'
-alias grh='git reset HEAD'
-alias grhh='git reset HEAD --hard'
+#alias grh='git reset HEAD'
+#alias grhh='git reset HEAD --hard'
 #alias grmv='git remote rename'
 #alias grrm='git remote remove'
-alias grset='git remote set-url'
+#alias grset='git remote set-url'
 #alias grt='cd $(git rev-parse --show-toplevel || echo ".")'
 #alias gru='git reset --'
 #alias grup='git remote update'
 alias grv='git remote -v'
 
-alias gsb='git status -sb'
+#alias gsb='git status -sb'
 #alias gsd='git svn dcommit'
 #alias gsi='git submodule init'
 #alias gsps='git show --pretty=short --show-signature'
@@ -227,7 +228,7 @@ alias gst='git status'
 #alias gsts='git stash show --text'
 #alias gsu='git submodule update'
 #
-alias gts='git tag -s'
+#alias gts='git tag -s'
 #alias gtv='git tag | sort -V'
 
 #alias gunignore='git update-index --no-assume-unchanged'
